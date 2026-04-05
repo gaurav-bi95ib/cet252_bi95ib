@@ -1,0 +1,11 @@
+{
+  "name": "game-review-client",
+  "version": "1.0.0",
+  "description": "CET252 Game Review Client application and tests",
+  "scripts": {
+    "test": "testcafe chrome tests/"
+  },
+  "devDependencies": {
+    "testcafe": "^3.6.0"
+  }
+}
