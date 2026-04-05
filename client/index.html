@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Reviews - CET252 Prototype</title>
+    <meta name="description" content="A premium Game Review Platform Prototype">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <h1>Game Reviews</h1>
+            <p>Explore, Add, and Manage your favorite game reviews.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Add New Game Section -->
+        <section class="card add-game-section" id="form-section">
+            <h2 id="form-title">Add New Game Review</h2>
+            <form id="game-form">
+                <input type="hidden" id="game-id">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required placeholder="e.g. The Legend of Zelda">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="genre">Genre</label>
+                        <input type="text" id="genre" required placeholder="e.g. Adventure">
+                    </div>
+                    <div class="form-group">
+                        <label for="platform">Platform</label>
+                        <input type="text" id="platform" required placeholder="e.g. Nintendo Switch">
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating (1-10)</label>
+                        <input type="number" id="rating" min="1" max="10" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="review">Review</label>
+                    <textarea id="review" rows="3" required placeholder="Write your review..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="submit-btn" data-testid="submit-btn">Save Review</button>
+                    <button type="button" class="btn btn-secondary hidden" id="cancel-btn">Cancel Edit</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Games List Section -->
+        <section class="games-list-section">
+            <h2>Latest Reviews</h2>
+            <div class="grid" id="games-grid">
+                <!-- Game Cards will be heavily injected here by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Developed for CET252 Assessment • Prototype Version 1.0</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
